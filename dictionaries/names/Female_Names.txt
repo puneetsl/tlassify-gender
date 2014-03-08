@@ -98,15 +98,15 @@ Ellie
 Mariah
 Aubree
 Kaitlyn
-10Violet	10Vincent
-10Rylee	10Easton
-10Lilly	10Eric
-10Angelina	10Micah
-10Katelyn	10Kayden
-10Mya	10Jace
-10Paige	10Aidan
-10Natalia	10Ryder
-10Ruby	10Ashton
+Violet
+Rylee
+Lilly
+Angelina
+Katelyn
+Mya
+Paige
+Natalia
+Ruby
 Piper
 Annabelle
 Mary
@@ -198,15 +198,15 @@ Aniyah
 Allie
 Miranda
 Jacqueline
-20Melody	20Avery
-20Willow	20Kai
-20Diana	20Weston
-20Cora	20Ezra
-20Alexandria	20Xander
-20Mikayla	20Jaylen
-20Danielle	20Corbin
-20Londyn	20Fernando
-20Addyson	20Calvin
+Melody
+Willow
+Diana
+Cora
+Alexandria
+Mikayla
+Danielle
+Londyn
+Addyson
 Amaya
 Hazel
 Callie
@@ -298,15 +298,15 @@ Dakota
 Mariana
 Gia
 Adelyn
-30Madilyn	30Derrick
-30Jazmin	30Grady
-30Iris	30Emilio
-30Nina	30Finn
-30Georgia	30Elliott
-30Lilah	30Pedro
-30Breanna	30Amari
-30Kenzie	30Frank
-30Jayda	30Rowan
+Madilyn
+Jazmin
+Iris
+Nina
+Georgia
+Lilah
+Breanna
+Kenzie
+Jayda
 Phoebe
 Lilliana
 Kamryn
@@ -398,15 +398,15 @@ Alessandra
 Julissa
 Kailyn
 Jazlyn
-40Janiyah	40Jay
-40Kaylie	40Rocco
-40Madelynn	40Kolton
-40Baylee	40Russell
-40Itzel	40Leon
-40Monica	40Philip
-40Adelaide	40Gael
-40Brylee	40Quentin
-40Michaela	40Tony
+Janiyah
+Kaylie
+Madelynn
+Baylee
+Itzel
+Monica
+Adelaide
+Brylee
+Michaela
 Madisyn
 Cassandra
 Elle
@@ -498,15 +498,15 @@ Briella
 Emilee
 Lorelei
 Francesca
-50Arielle	50Warren
-50Madyson	50Gunnar
-50Amira	50Ramon
-50Jaelynn	50Franklin
-50Nataly	50Kane
-50Annika	50Byron
-50Joy	50Cason
-50Alanna	50Brett
-50Shayla	50Ari
+Arielle
+Madyson
+Amira
+Jaelynn
+Nataly
+Annika
+Joy
+Alanna
+Shayla
 Brenna
 Sloane
 Vera
@@ -598,15 +598,15 @@ Clarissa
 Elyse
 Marie
 Alissa
-60Anabella	60Javon
-60Hallie	60Kian
-60Denise	60Wilson
-60Elisabeth	60Jeffery
-60Kaia	60Joey
-60Danika	60Kendall
-60Kimora	60Harper
-60Milan	60Jensen
-60Claudia	60Mohammad
+Anabella
+Hallie
+Denise
+Elisabeth
+Kaia
+Danika
+Kimora
+Milan
+Claudia
 Dana
 Siena
 Zion
@@ -698,15 +698,15 @@ Elaine
 Lillianna
 Ellen
 Taryn
-70Lailah	70Raylan
-70Rylan	70Jefferson
-70Lisa	70Steve
-70Emersyn	70Wayne
-70Braelynn	70Leonard
-70Shannon	70Kolby
-70Beatrice	70Ayaan
-70Heather	70Emery
-70Jaylin	70Harry
+Lailah
+Rylan
+Lisa
+Emersyn
+Braelynn
+Shannon
+Beatrice
+Heather
+Jaylin
 Taliyah
 Arya
 Emilie
@@ -798,15 +798,15 @@ Corinne
 Jazmyn
 Kaiya
 Lorelai
-80Abril	80Jamie
-80Kenya	80Maximo
-80Mae	80Cael
-80Hadassah	80Conrad
-80Alisson	80Ronin
-80Haylie	80Xavi
-80Brisa	80Dominique
-80Deborah	80Ean
-80Mina	80Tyrone
+Abril
+Kenya
+Mae
+Hadassah
+Alisson
+Haylie
+Brisa
+Deborah
+Mina
 Rayne
 America
 Ryann
@@ -898,15 +898,15 @@ Sanaa
 Kailynn
 Diya
 Rory
-90Abbey	90Nixon
-90Karis	90Tyrell
-90Maliah	90Vaughn
-90Belen	90Elvis
-90Bentley	90Freddy
-90Jaidyn	90Demarcus
-90Shania	90Gaige
-90Britney	90Jaylon
-90Yazmin	90Gibson
+Abbey
+Karis
+Maliah
+Belen
+Bentley
+Jaidyn
+Shania
+Britney
+Yazmin
 Aubri
 Malaya
 Micah
