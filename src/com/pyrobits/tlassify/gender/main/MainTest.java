@@ -56,6 +56,9 @@ public class MainTest {
 				float maleProb=0,femaleProb=0;
 				float i=4f;
 				int k=1;
+				/*
+				 * 
+				 */
 				for (String nameToken : nameTokens) {
 					i=i-0.2f;//giving weight to first name
 					if(udl.getMaleNameIndex(nameToken) !=0)
