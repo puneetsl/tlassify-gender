@@ -1,0 +1,8 @@
+Total Male:142
+Right Male:119
+wrongly classified as female:4
+Not Classified Male:19
+Total Female:157
+Right Female:126
+wrongly classified as male:5
+Not Classified Female:26
