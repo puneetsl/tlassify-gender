@@ -52,6 +52,7 @@ public class MainTest {
 				String myLabel="";
 				Name = Name +" " +ScreenName;
 				Name =Name +" "+ Bio;
+				//TODO Make code clean and shift this from main
 				String nameTokens[] = Name.split(" ");
 				float maleProb=0,femaleProb=0;
 				float i=4f;
