@@ -1,0 +1,11 @@
+PerformanceVector:
+accuracy: 90.31% +/- 5.65% (mikro: 90.30%)
+ConfusionMatrix:
+True:	female	male
+female:	151	23
+male:	6	119
+kappa: 0.805 +/- 0.114 (mikro: 0.804)
+ConfusionMatrix:
+True:	female	male
+female:	151	23
+male:	6	119
