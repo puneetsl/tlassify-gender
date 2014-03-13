@@ -44,7 +44,6 @@ public class UserDataLoader {
 					ubbTemp.setScreenName(temp.getString("Screen_Name"));
 					ubbTemp.setBioText(temp.getString("Bio"));
 					ubbTemp.setLink(temp.getString("Link"));
-					ubbTemp.setLocation(temp.getString("Location"));
 					ubbTemp.setLabel(temp.getString("Label"));
 					ubbTemp.setTweets(Integer.parseInt(temp.getString("Tweets")));
 					ubbTemp.setFollowers(Integer.parseInt(temp.getString("Followers")));

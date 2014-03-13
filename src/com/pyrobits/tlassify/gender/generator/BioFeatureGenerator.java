@@ -16,7 +16,6 @@ public class BioFeatureGenerator extends FloatFeatureGenerator{
 			 * Right now using only name and screen name to generate the features 
 			 */
 			String Bio = udl.getUserBio().get(i).getBioText();
-			
 			Bio = SimpleCleaner.cleanAnythingElseThanCharachters(Bio);
 			Bio = SimpleCleaner.cleanCamelCasing(Bio);
 			Bio = SimpleCleaner.cleanRepeatingText(Bio);

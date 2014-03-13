@@ -6,7 +6,6 @@ public class UserBioBean {
 	private String Name;
 	private String BioText;
 	private String Link;
-	private String Location;
 	private int Tweets;
 	private int Followers;
 	private int Following;
@@ -42,12 +41,6 @@ public class UserBioBean {
 	}
 	public void setLink(String link) {
 		Link = link;
-	}
-	public String getLocation() {
-		return Location;
-	}
-	public void setLocation(String location) {
-		Location = location;
 	}
 	public int getTweets() {
 		return Tweets;
