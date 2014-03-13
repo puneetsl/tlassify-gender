@@ -2,7 +2,7 @@ package com.pyrobits.tlassify.gender.generator;
 
 import java.util.HashMap;
 
-public abstract class FeatureGenerator {
+public abstract class FloatFeatureGenerator {
 	private HashMap<Integer, Float> featureValues = new HashMap<>();
 
 	public void setFeatureValue(Integer key, Float value)

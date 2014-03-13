@@ -5,7 +5,7 @@ import com.pyrobits.tlassify.gender.cleaner.SimpleCleaner;
 import com.pyrobits.tlassify.gender.loader.NameDictionaryLoader;
 import com.pyrobits.tlassify.gender.loader.UserDataLoader;
 
-public class NameFeatureGenerator extends FeatureGenerator{
+public class NameFeatureGenerator extends FloatFeatureGenerator{
 	/**
 	 * I would get loaded names and userData in my class all I have to do is use them to iterate over and generate features
 	 */
