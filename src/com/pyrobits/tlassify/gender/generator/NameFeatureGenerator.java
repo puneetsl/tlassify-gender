@@ -5,7 +5,7 @@ import com.pyrobits.tlassify.gender.cleaner.SimpleCleaner;
 import com.pyrobits.tlassify.gender.loader.NameDictionaryLoader;
 import com.pyrobits.tlassify.gender.loader.UserDataLoader;
 
-public class BioFeatureGenerator extends FeatureGenerator{
+public class NameFeatureGenerator extends FeatureGenerator{
 	/**
 	 * I would get loaded names and userData in my class all I have to do is use them to iterate over and generate features
 	 */
@@ -15,12 +15,15 @@ public class BioFeatureGenerator extends FeatureGenerator{
 			/*
 			 * Right now using only name and screen name to generate the features 
 			 */
-			String Bio = udl.getUserBio().get(i).getBioText();
-			
-			Bio = SimpleCleaner.cleanAnythingElseThanCharachters(Bio);
-			Bio = SimpleCleaner.cleanCamelCasing(Bio);
-			Bio = SimpleCleaner.cleanRepeatingText(Bio);
-			String text = Bio;
+			String Name = udl.getUserBio().get(i).getName();
+			String ScreenName = udl.getUserBio().get(i).getScreenName();
+			Name = SimpleCleaner.cleanAnythingElseThanCharachters(Name);
+			Name = SimpleCleaner.cleanCamelCasing(Name);
+			Name = SimpleCleaner.cleanRepeatingText(Name);
+			ScreenName = SimpleCleaner.cleanAnythingElseThanCharachters(ScreenName);
+			ScreenName = SimpleCleaner.cleanCamelCasing(ScreenName);
+			ScreenName = SimpleCleaner.cleanRepeatingText(ScreenName);
+			String text = Name + " " + ScreenName;
 			String[] tokenText = text.split(" ");
 			float maleProb=0,femaleProb=0;
 			float weightP=4f;
