@@ -1,4 +1,4 @@
-package com.pyrobits.tlassify.gender.main;
+package com.pyrobits.tlassify.gender.maintest;
 
 
 import com.pyrobits.tlassify.gender.loader.UserDataLoader;

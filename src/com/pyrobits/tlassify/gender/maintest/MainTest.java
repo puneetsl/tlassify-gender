@@ -1,4 +1,4 @@
-package com.pyrobits.tlassify.gender.main;
+package com.pyrobits.tlassify.gender.maintest;
 /*
  * My class to test stuff, will  not use this ultimately
  */
