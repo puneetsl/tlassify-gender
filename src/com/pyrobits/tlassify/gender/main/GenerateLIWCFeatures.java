@@ -22,7 +22,7 @@ public class GenerateLIWCFeatures {
 		InputStream input = new FileInputStream("properties/labels.properties");
 		prop.load(input);
 		try {
-			File file = new File("output/LIWCFeatures.csv");
+			File file = new File("output/LIWCFeatures2.csv");
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
