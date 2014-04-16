@@ -38,7 +38,7 @@ public class CreateCleanStatus {
 						System.out.println("Writing line: "+i);
 						String string = lines[i];
 						String[] vals = string.split("#",3);
-						bw.write(sc.cleanEverything(vals[1], false));
+						bw.write(sc.cleanEverything(vals[1], false)+"\n");
 						//System.out.println(sc.cleanEverything(vals[1], true)); 
 					}
 					bw.close();
