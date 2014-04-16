@@ -3,8 +3,8 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/java-json.jar"/>
-	<classpathentry kind="lib" path="lib/ShortCleaner_0.01.jar"/>
 	<classpathentry kind="lib" path="lib/jmyspell-core-1.0.0-beta-2.jar"/>
 	<classpathentry kind="lib" path="lib/textbrew_0.03.jar"/>
+	<classpathentry kind="lib" path="lib/ShortCleaner_0.02.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

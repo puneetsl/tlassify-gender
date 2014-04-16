@@ -26,7 +26,7 @@ public class CreateCleanStatus {
 	            try {
 					String text = readFileAsString(fileEntry.getAbsolutePath());
 					String[] lines = text.split("\n");
-					File file = new File("userdata/clean_status_without_spelling_correction/"+fileEntry.getName());
+					File file = new File("userdata/clean_status_with_spelling_correction/"+fileEntry.getName());
 					System.out.println("Writing file: "+fileEntry.getName());
 					// if file doesnt exists, then create it
 					if (!file.exists()) {
@@ -38,7 +38,7 @@ public class CreateCleanStatus {
 						System.out.println("Writing line: "+i);
 						String string = lines[i];
 						String[] vals = string.split("#",3);
-						bw.write(sc.cleanEverything(vals[1], false)+"\n");
+						bw.write(sc.cleanEverything(vals[1], true)+"\n");
 						//System.out.println(sc.cleanEverything(vals[1], true)); 
 					}
 					bw.close();
