@@ -17,9 +17,9 @@ private InputStream input = null;
 		try {
 			liwc_abs = new SimpleDictionaryLoader();
 			liwc_stem = new SimpleDictionaryLoader();
-			input = new FileInputStream("Dictionaries/liwc2007_absolute.db");
+			input = new FileInputStream("dictionaries/LIWC/liwc2007_absolute.db");
 			liwc_abs.load(input);
-			input = new FileInputStream("Dictionaries/liwc2007_withstem.db");
+			input = new FileInputStream("dictionaries/LIWC/liwc2007_withstem.db");
 			liwc_stem.load(input);
 		} catch (IOException e) {
 			e.printStackTrace();
