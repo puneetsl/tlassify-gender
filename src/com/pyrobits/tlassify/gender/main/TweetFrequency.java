@@ -24,7 +24,7 @@ public class TweetFrequency {
 		InputStream input = new FileInputStream("properties/labels.properties");
 		prop.load(input);
 		try {
-			File file = new File("output/TweetFreqFeature.csv");
+			File file = new File("output/TweetFreqFeature_1000.csv");
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
@@ -33,7 +33,7 @@ public class TweetFrequency {
 			BufferedWriter bw = new BufferedWriter(fw);
 			bw.write("File,");
 			bw.write("Frequency,Label\n");
-			final File folder = new File("userdata/raw_status");
+			final File folder = new File("userdata/raw_status_1000");
 			listFilesForFolder(folder,bw,prop);
 			bw.close();
 		} catch (IOException e) {
@@ -56,9 +56,9 @@ public class TweetFrequency {
 						if(lines.length>0)
 						{
 							bw.write(fileEntry.getName()+",");
-							String[] vals = lines[0].split("#");
+							String[] vals = lines[1].split(",");
 							String first = vals[0];
-							vals = lines[lines.length-1].split("#");
+							vals = lines[lines.length-1].split(",");
 							String last = vals[0];
 							//System.out.println(first+","+last);
 							//--------------------------------
@@ -66,14 +66,26 @@ public class TweetFrequency {
 							String[] time2Str = last.split(" ");
 							Date date1,date2;
 							try {
-								date1 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(first);
-								date2 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(last);
+//								date1 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(first);
+//								date2 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(last);
+								//2014-04-02 23:34:47
+								date1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(first);
+								date2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(last);
 								int diffInDays = (int)( (date1.getTime() - date2.getTime()) 
 						                 / (1000 * 60 * 60 * 24) );
-								bw.write(diffInDays+",");
+								bw.write((float)diffInDays/(float)lines.length+",");
 							} catch (ParseException e) {
-								// TODO Auto-generated catch block
-								e.printStackTrace();
+								try {
+									date1 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(first);
+									date2 = new SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy").parse(last);
+									int diffInDays = (int)( (date1.getTime() - date2.getTime()) 
+							                 / (1000 * 60 * 60 * 24) );
+									bw.write((float)diffInDays/(float)lines.length+",");
+								} catch (ParseException e1) {
+									// TODO Auto-generated catch block
+									e1.printStackTrace();
+								}
+								
 							}
 							 // Sat Jan 02 00:00:00 BOT 2010
 							bw.write(prop.getProperty(fileEntry.getName())+"\n");

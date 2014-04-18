@@ -14,34 +14,49 @@ public class CreateCleanStatus {
 
 	public static void main(String[] args) {
 		ShortCleaner sc = new ShortCleaner();
-		final File folder = new File("userdata/raw_status");
-		listFilesForFolder(folder, 1,sc);
+		final File folder = new File("userdata/raw_status_1000");
+		listFilesForFolder(folder, 1,sc,0);
 	}
-	public static void listFilesForFolder(final File folder,int label, ShortCleaner sc) {
+	public static void listFilesForFolder(final File folder,int label, ShortCleaner sc,int flag) {
 	    for (final File fileEntry : folder.listFiles()) {
 	        if (fileEntry.isDirectory()) {
-	            listFilesForFolder(fileEntry,label,sc);
+	            listFilesForFolder(fileEntry,label,sc,flag);
 	        } else {
 //	            System.out.println(fileEntry.getName());
-	            try {
-					String text = readFileAsString(fileEntry.getAbsolutePath());
-					String[] lines = text.split("\n");
-					File file = new File("userdata/clean_status_with_spelling_correction/"+fileEntry.getName());
-					System.out.println("Writing file: "+fileEntry.getName());
-					// if file doesnt exists, then create it
-					if (!file.exists()) {
-						file.createNewFile();
-					}
-					FileWriter fw = new FileWriter(file.getAbsoluteFile());
-					BufferedWriter bw = new BufferedWriter(fw);
-					for (int i = 0; i < lines.length; i++) {
-						System.out.println("Writing line: "+i);
-						String string = lines[i];
-						String[] vals = string.split("#",3);
-						bw.write(sc.cleanEverything(vals[1], true)+"\n");
-						//System.out.println(sc.cleanEverything(vals[1], true)); 
-					}
-					bw.close();
+	            try {    
+//	            	if(fileEntry.getName().equals("243319382"))
+	            		flag=1;
+	            	if(flag==1)
+	            	{
+	            		String text = readFileAsString(fileEntry.getAbsolutePath());
+						String[] lines = text.split("\n");
+//						for (int j = 0; j < 100000000; j++) {}
+						File file = new File("userdata/1000/clean_status_without_spelling_correction/"+fileEntry.getName());
+						for (int j = 0; j < 100000000; j++) {}
+						System.out.println("Writing file: "+fileEntry.getName());
+						// if file doesnt exists, then create it
+						if (!file.exists()) {
+							file.createNewFile();
+							for (int j = 0; j < 100000000; j++) {}
+						}
+						FileWriter fw = new FileWriter(file.getAbsoluteFile());
+						BufferedWriter bw = new BufferedWriter(fw);
+						for (int i = 0; i < lines.length; i++) {
+//							System.out.println("Writing line: "+i);
+							String string = lines[i];
+							String[] vals = string.split(",",3);
+							if(vals.length>1)
+							{
+								String toWrite = sc.cleanEverything(vals[1], false);
+								bw.write(toWrite+"\n");
+							}
+//							for (int j = 0; j < 100000000; j++) {}
+							
+							//System.out.println(sc.cleanEverything(vals[1], true)); 
+						}
+						System.gc();
+						bw.close();
+	            	}
 				} catch (IOException e) {
 					e.printStackTrace();
 				}

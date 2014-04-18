@@ -22,7 +22,7 @@ public class GenerateLIWCFeatures {
 		InputStream input = new FileInputStream("properties/labels.properties");
 		prop.load(input);
 		try {
-			File file = new File("output/LIWCFeatures.csv");
+			File file = new File("output/LIWCFeatures_1000_withoutSpellCorrect_2.csv");
 			// if file doesnt exists, then create it
 			if (!file.exists()) {
 				file.createNewFile();
@@ -34,7 +34,7 @@ public class GenerateLIWCFeatures {
 				bw.write("F"+(i+1)+",");
 			}
 			bw.write("F65,Label\n");
-			final File folder = new File("userdata/clean_status_without_spelling_correction");
+			final File folder = new File("userdata/1000/clean_status_without_spelling_correction");
 			listFilesForFolder(folder,liwcLoader,bw,prop);
 			bw.close();
 		} catch (IOException e) {
