@@ -29,28 +29,35 @@ def gender(he,she):
 		return "2"
 
 
-
-celeb = str(sys.argv[1:][0])
-celeb = wikipedia.suggest(celeb)
-if(str(celeb)=="None"):
-	sentence =  wikipedia.summary(str(sys.argv[1:][0]), sentences=1)
-	total_summary = wikipedia.page(str(sys.argv[1:][0])).content
-else:
-	sentence =  wikipedia.summary(celeb, sentences=1)
-	total_summary = wikipedia.page(celeb).content
+try:
+	celeb = str(sys.argv[1:][0])
+	celeb = wikipedia.suggest(celeb)
+	if(str(celeb)=="None"):
+		try:
+			sentence =  wikipedia.summary(str(sys.argv[1:][0]), sentences=1)
+			total_summary = wikipedia.page(str(sys.argv[1:][0])).content
+		except:
+			print "NULL,NULL"
+			sys.exit(0)
+	else:
+		try:
+			sentence =  wikipedia.summary(celeb, sentences=1)
+			total_summary = wikipedia.page(celeb).content
+		except:
+			print "NULL,NULL"
+			sys.exit(0)
+except:
+	print "NULL,NULL"
+	sys.exit(0)
 he_cnt = total_summary.count(' he ')
 he_cnt += total_summary.count(' him ')
+he_cnt += total_summary.count(' his ')
 he_cnt += total_summary.count('.He ')
 
 she_cnt = total_summary.count(' she ')
 she_cnt = total_summary.count(' her ')
 she_cnt += total_summary.count('.She ')
-Music = total_summary.count(' music ')
-Music += total_summary.count('Music')
-Politics = total_summary.count(' politics ')
-Politics += total_summary.count('Politics')
-Comedy = total_summary.count(' comedy ')
-Comedy += total_summary.count('Comedy')
+
 
 sentence = sentence.replace(",","")
 person = sentence.count('born')
@@ -59,26 +66,36 @@ person += sentence.count('(')
 if(person>0):
 	hasSemiColon = sentence.count(';')
 	if(hasSemiColon>0):
-		vals = sentence.split(";")
-		text = vals[len(vals)-1]
-		text = text.split(")")[0]
-		prog = re.search("\d\d [A-Za-z]+ \d\d\d\d",text,re.M|re.I)
-		text = prog.group()
+		try:
+			vals = sentence.split(";")
+			text = vals[len(vals)-1]
+			text = text.split(")")[0]
+		except:
+			print "NULL,"+"NULL"
+			sys.exit(0)
+		try:
+			prog = re.search("[\d]+ [A-Za-z]+ \d\d\d\d|[A-Za-z]+ [\d]+ \d\d\d\d",text,re.M|re.I)
+			text = prog.group()
+		except:
+			text = sentence
 		sentence = (text)
 	else:
-		text = (sentence.split("("))[1].split(")")[0];
-		prog = re.search("\d\d [A-Za-z]+ \d\d\d\d",text,re.M|re.I)
-		text = prog.group()
+		try:
+			text = (sentence.split("("))[1].split(")")[0];
+			prog = re.search("\d\d [A-Za-z]+ \d\d\d\d|[A-Za-z]+ [\d]+ \d\d\d\d",text,re.M|re.I)
+			text = prog.group()
+		except:
+			text = sentence
 		sentence = (text)
-	datey = dparser.parse(sentence,fuzzy=True)
-	print datey
-	print days_between(str(dparser.parse("")),str(datey))/365
-	print "Music: "+str(Music)
-	print "Politics: "+str(Politics)
-	print "Comedy: "+str(Comedy)
-
+	try:
+		datey = dparser.parse(sentence,fuzzy=True)
+		age = days_between(str(dparser.parse("")),str(datey))/365
+	except:
+		print "NULL,"+str(gender(he_cnt,she_cnt))
+		sys.exit(0)
 	
+	print str(age_level(age))+","+str(gender(he_cnt,she_cnt))
 else:
-	print "It's and organization"
+	print "ORG,ORG"
 
 
