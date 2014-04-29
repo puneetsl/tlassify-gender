@@ -1,0 +1,19 @@
+Parameter set:
+
+
+Performance: 
+PerformanceVector [
+-----accuracy: 81.82% +/- 8.53% (mikro: 81.89%)
+ConfusionMatrix:
+True:	male	female
+male:	108	25
+female:	23	109
+-----kappa: 0.636 +/- 0.171 (mikro: 0.638)
+ConfusionMatrix:
+True:	male	female
+male:	108	25
+female:	23	109
+]
+
+SVM (Linear).C	= 0.083978
+SVM (Linear).convergence_epsilon	= 0.01288
